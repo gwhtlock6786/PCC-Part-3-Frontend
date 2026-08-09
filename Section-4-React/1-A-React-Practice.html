@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./1-A-React-Practice.css" />
+    <title>React Practice</title>
+
+    <!-- <script src="https://unpkg.com/react-dom@17/umd/react-dom-server.browser.development.js"></script>
+    <!-- React and ReactDOM (CDN) -->
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <!-- Babel for JSX compilation -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- React server (CDN) -->
+
+    <!-- added this below so I can define prop types in the Item example  -->
+    <script src="https://unpkg.com/prop-types@15.8.1/prop-types.min.js"></script>
+    -->
+
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom-server.browser.development.js"></script>
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script src="https://unpkg.com/prop-types@15.8.1/prop-types.min.js"></script>
+  </head>
+
+  <body>
+    <!-- TODO: add navbar to route to different pages that  display the different subsections listed below -->
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#ReactPractice">React Practice</a></li>
+          <li><a href="#ReactPropsExamples">React Props Examples</a></li>
+          <li><a href="#ReactStateExamples">React State Examples</a></li>
+          <li>
+            <a href="#ReactLifeCycleMethodsAndStyling"
+              >React LifeCycle Methods And Styling</a
+            >
+          </li>
+          <li>
+            <a href="#ReactConditionalRendering">React Conditional Rendering</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="container">
+      <h1 class="titles" id="ReactPractice">React practice</h1>
+      <hr />
+
+      <div class="card">
+        <div id="hitme"></div>
+      </div>
+
+      <div class="card">
+        <div id="hiFunctionalComponent"></div>
+      </div>
+      <div class="card">
+        <div id="HelloClassComponent"></div>
+      </div>
+      <div class="card">
+        <div id="ParentandChildComponents"></div>
+      </div>
+    </section>
+
+    <br />
+    <br />
+    <hr />
+
+    <!-- React Props examples -->
+    <h1 class="titles" id="ReactPropsExamples">React Props examples</h1>
+    <hr />
+
+    <div class="card">
+      <div id="ReactPropsDate"></div>
+    </div>
+    <div class="card">
+      <div id="ReactPropsArray"></div>
+    </div>
+    <div class="card">
+      <div id="DefaultPropsExample"></div>
+    </div>
+    <div class="card">
+      <div id="UsingThis.Props"></div>
+    </div>
+    <div class="card">
+      <div id="UsingPropType"></div>
+    </div>
+
+    <br />
+    <br />
+    <hr />
+    <!-- React State examples -->
+    <section class="container">
+      <h1 class="titles" id="ReactStateExamples">React State examples</h1>
+      <hr />
+
+      <div class="card">
+        <div id="UsingState"></div>
+      </div>
+      <div class="card">
+        <div id="SaveStateInVariable"></div>
+      </div>
+      <div class="card">
+        <div id="SetStateExample"></div>
+      </div>
+      <div class="card">
+        <div id="UseStateToToggleElement"></div>
+      </div>
+      <div class="card">
+        <div id="WriteSimpleCounter"></div>
+      </div>
+
+      <div class="card">
+        <div id="ControlledInput"></div>
+      </div>
+      <div class="card">
+        <div id="CreateControlledForm"></div>
+      </div>
+      <div class="card">
+        <div id="PassStateAsPropsToChildComponents"></div>
+      </div>
+      <div class="card">
+        <div id="PassCallbackAsPropsToChildComponents"></div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <hr />
+
+    <!-- React LifeCycle Methods And Styling examples -->
+    <section class="container">
+      <h1 class="titles" id="ReactLifeCycleMethodsAndStyling">
+        React LifeCycle Methods And Styling
+      </h1>
+      <hr />
+
+      <div class="card">
+        <div id="UseTheLifecycleMethodComponentWillMount"></div>
+      </div>
+      <div class="card">
+        <div id="UseTheLifecycleMethodComponentDidMount"></div>
+      </div>
+      <div class="card">
+        <div id="AddEventListeners"></div>
+      </div>
+      <div class="card">
+        <div id="OptimizeReRendersWithShouldComponentUpdate"></div>
+      </div>
+      <div class="card">
+        <div id="IntroducingInlineStyles"></div>
+      </div>
+      <div class="card">
+        <div id="AddInlineStylesinReact"></div>
+      </div>
+      <div class="card">
+        <div id="UseAdvancedJavaScriptInReactRenderMethod"></div>
+      </div>
+    </section>
+
+    <br />
+    <br />
+    <hr />
+
+    <section class="container">
+      <!-- React LifeCycle Methods And Styling examples -->
+      <h1 class="titles" id="ReactConditionalRendering">
+        React Conditional Rendering
+      </h1>
+      <hr />
+      <div class="card">
+        <div id="RenderWithAnIf-ElseCondition"></div>
+      </div>
+      <div class="card">
+        <div id="UseLogalicalAndForAMoreConciseConditional"></div>
+      </div>
+      <div class="card">
+        <div id="UseTernaryExpressionForConditionalRendering"></div>
+      </div>
+
+      <div class="card">
+        <div id="RenderConditionallyFromProps"></div>
+      </div>
+      <div class="card">
+        <div id="ChangeInlineCSSConditionally"></div>
+      </div>
+      <div class="card">
+        <div id="UseArraymapToDynamicallyRenderElements"></div>
+      </div>
+      <div class="card">
+        <div id="GiveSiblingElementsaUniqueKeyAttribute"></div>
+      </div>
+      <div class="card">
+        <div id="UseArrayFilterToDynamicallyFilterAnArray"></div>
+      </div>
+    </section>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <div>Bottom</div>
+
+    <!-- Tell Babel to compile this JSX -->
+    <script type="text/babel" src="./1-A-React-Practice.jsx"></script>
+    <script type="text/babel" src="./2-classComponent.jsx"></script>
+
+    <script type="text/babel" src="./3-ParentAndChildComponent.jsx"></script>
+    <script type="text/babel" src="./4-ReactPropsExamples.jsx"></script>
+    <script type="text/babel" src="./5-ReactStateExamples.jsx"></script>
+    <script
+      type="text/babel"
+      src="./6-ReactLifeCycleMethodsAndStyling.jsx"
+    ></script>
+    <script type="text/babel" src="./7-ReactConditionalRendering.jsx"></script>
+  </body>
+</html>
