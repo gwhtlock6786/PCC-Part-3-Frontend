@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Redux Practice - Step 1</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- =======================================================
+           PAGE TITLE
+           ======================================================= -->
+
+      <h1>Redux Practice - Step 1</h1>
+
+      <p class="intro">
+        This exercise demonstrates how to create a Redux store. Click the button
+        below to test the Redux store.
+      </p>
+
+      <!-- =======================================================
+           STEP 1
+           CREATE A REDUX STORE
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="step-number">Step 1</div>
+
+        <h2>Create a Redux Store</h2>
+
+        <p>
+          A Redux store holds the state of our application. We create a store by
+          providing Redux with a reducer.
+        </p>
+
+        <button onclick="testCreateStore()">Test Store</button>
+
+        <div id="store-output" class="output">Output will appear here...</div>
+      </div>
+    </div>
+
+    <!-- =======================================================
+         REDUX LIBRARY
+         ======================================================= -->
+
+    <!--
+      Redux must load BEFORE our JavaScript file.
+
+      This gives step-1.jsx access to the global Redux object.
+    -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.1/redux.min.js"></script>
+
+    <!-- =======================================================
+         STEP 1 JAVASCRIPT
+         ======================================================= -->
+
+    <script src="./step-1.jsx"></script>
+  </body>
+</html>
