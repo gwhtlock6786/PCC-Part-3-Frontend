@@ -8,6 +8,10 @@
     <title>Redux Practice Tester</title>
 
     <style>
+      /* =========================================================
+         BASIC PAGE STYLING
+         ========================================================= */
+
       * {
         box-sizing: border-box;
       }
@@ -20,14 +24,23 @@
         color: #222;
       }
 
-      h1 {
-        margin-top: 0;
-      }
-
       .container {
         max-width: 900px;
         margin: 0 auto;
       }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      .intro {
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+
+      /* =========================================================
+         EXERCISE CARDS
+         ========================================================= */
 
       .exercise {
         background-color: white;
@@ -41,86 +54,156 @@
         margin-top: 0;
       }
 
+      .exercise-number {
+        font-size: 14px;
+        font-weight: bold;
+        color: #666;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+      }
+
+      /* =========================================================
+         BUTTONS
+         ========================================================= */
+
       button {
         padding: 10px 16px;
+        margin-top: 10px;
         margin-right: 10px;
         margin-bottom: 10px;
+
         border: none;
         border-radius: 5px;
+
         cursor: pointer;
+
         background-color: #333;
         color: white;
+
+        font-size: 15px;
       }
 
       button:hover {
         background-color: #555;
       }
 
+      /* =========================================================
+         OUTPUT BOX
+         ========================================================= */
+
       .output {
         margin-top: 15px;
         padding: 15px;
+
         background-color: #eee;
+
         border-radius: 5px;
+
         min-height: 45px;
+
         white-space: pre-wrap;
+
+        font-family: Consolas, monospace;
+        line-height: 1.5;
+      }
+
+      /* =========================================================
+         STEP DIVIDER
+         ========================================================= */
+
+      .section-divider {
+        margin: 40px 0 25px;
+        padding-bottom: 10px;
+
+        border-bottom: 3px solid #333;
       }
     </style>
   </head>
 
   <body>
     <div class="container">
+      <!-- =======================================================
+           PAGE TITLE
+           ======================================================= -->
+
       <h1>Redux Practice Tester</h1>
 
-      <p>Use the buttons below to test each Redux exercise separately.</p>
+      <p class="intro">
+        This page allows you to test each Redux exercise separately. Each
+        exercise corresponds to a section from the original Redux practice file.
+      </p>
 
-      <!-- =========================================================
-           EXERCISE 1
-           Create a Redux Store
-           ========================================================= -->
+      <!-- =======================================================
+           STEPS 1 - 10
+           ======================================================= -->
+
+      <h2 class="section-divider">Steps 1 - 10</h2>
+
+      <!-- =======================================================
+           STEP 1
+           CREATE A REDUX STORE
+           ======================================================= -->
 
       <div class="exercise">
-        <h2>1. Create a Redux Store</h2>
+        <div class="exercise-number">Step 1</div>
 
-        <p>This tests the first section of your Redux practice file.</p>
+        <h2>Create a Redux Store</h2>
+
+        <p>Creates a Redux store using a reducer.</p>
 
         <button onclick="testCreateStore()">Test Store</button>
 
         <div id="store-output" class="output">Output will appear here...</div>
       </div>
 
-      <!-- =========================================================
-           EXERCISE 2
-           Get State from Redux Store
-           ========================================================= -->
+      <!-- =======================================================
+           STEP 2
+           GET STATE FROM THE REDUX STORE
+           ======================================================= -->
 
       <div class="exercise">
-        <h2>2. Get State from the Redux Store</h2>
+        <div class="exercise-number">Step 2</div>
+
+        <h2>Get State from the Redux Store</h2>
+
+        <p>Uses <code>getState()</code> to retrieve the current Redux state.</p>
 
         <button onclick="testGetState()">Get State</button>
 
         <div id="state-output" class="output">Output will appear here...</div>
       </div>
 
-      <!-- =========================================================
-           EXERCISE 3
-           Define a Redux Action
-           ========================================================= -->
+      <!-- =======================================================
+           STEP 3
+           DEFINE A REDUX ACTION
+           ======================================================= -->
 
       <div class="exercise">
-        <h2>3. Define a Redux Action</h2>
+        <div class="exercise-number">Step 3</div>
+
+        <h2>Define a Redux Action</h2>
+
+        <p>
+          Creates an action object with a
+          <code>type</code> property.
+        </p>
 
         <button onclick="testAction()">Show Action</button>
 
         <div id="action-output" class="output">Output will appear here...</div>
       </div>
 
-      <!-- =========================================================
-           EXERCISE 4
-           Define an Action Creator
-           ========================================================= -->
+      <!-- =======================================================
+           STEP 4
+           DEFINE AN ACTION CREATOR
+           ======================================================= -->
 
       <div class="exercise">
-        <h2>4. Define an Action Creator</h2>
+        <div class="exercise-number">Step 4</div>
+
+        <h2>Define an Action Creator</h2>
+
+        <p>Calls a function that returns a Redux action.</p>
 
         <button onclick="testActionCreator()">Run Action Creator</button>
 
@@ -129,13 +212,20 @@
         </div>
       </div>
 
-      <!-- =========================================================
-           EXERCISE 5
-           Dispatch an Action
-           ========================================================= -->
+      <!-- =======================================================
+           STEP 5
+           DISPATCH AN ACTION EVENT
+           ======================================================= -->
 
       <div class="exercise">
-        <h2>5. Dispatch an Action</h2>
+        <div class="exercise-number">Step 5</div>
+
+        <h2>Dispatch an Action</h2>
+
+        <p>
+          Sends an action to the Redux store using
+          <code>dispatch()</code>.
+        </p>
 
         <button onclick="testDispatch()">Dispatch LOGIN</button>
 
@@ -144,17 +234,242 @@
         </div>
       </div>
 
-      <!-- =========================================================
-           Redux Library
-           ========================================================= -->
+      <!-- =======================================================
+           STEP 6
+           HANDLE AN ACTION IN THE STORE
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="exercise-number">Step 6</div>
+
+        <h2>Handle an Action in the Store</h2>
+
+        <p>
+          The reducer checks the action type and changes the state when a
+          <code>LOGIN</code> action is received.
+        </p>
+
+        <button onclick="testHandleAction()">Test LOGIN</button>
+
+        <div id="handle-action-output" class="output">
+          Output will appear here...
+        </div>
+      </div>
+
+      <!-- =======================================================
+           STEP 7
+           USE A SWITCH STATEMENT
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="exercise-number">Step 7</div>
+
+        <h2>Use a Switch Statement</h2>
+
+        <p>
+          The reducer handles multiple actions using
+          <code>switch</code>.
+        </p>
+
+        <button onclick="testSwitchActions()">Test LOGIN / LOGOUT</button>
+
+        <div id="switch-output" class="output">Output will appear here...</div>
+      </div>
+
+      <!-- =======================================================
+           STEP 8
+           USE CONST FOR ACTION TYPES
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="exercise-number">Step 8</div>
+
+        <h2>Use const for Action Types</h2>
+
+        <p>
+          Uses constants such as <code>LOGIN</code> and
+          <code>LOGOUT</code> instead of repeating strings.
+        </p>
+
+        <button onclick="testConstActionTypes()">Test Action Constants</button>
+
+        <div id="const-output" class="output">Output will appear here...</div>
+      </div>
+
+      <!-- =======================================================
+           STEP 9
+           REGISTER A STORE LISTENER
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="exercise-number">Step 9</div>
+
+        <h2>Register a Store Listener</h2>
+
+        <p>
+          Uses <code>store.subscribe()</code> to run code whenever the Redux
+          store changes.
+        </p>
+
+        <button onclick="testStoreListener()">Test Store Listener</button>
+
+        <div id="listener-output" class="output">
+          Output will appear here...
+        </div>
+      </div>
+
+      <!-- =======================================================
+           STEP 10
+           COMBINE MULTIPLE REDUCERS
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="exercise-number">Step 10</div>
+
+        <h2>Combine Multiple Reducers</h2>
+
+        <p>
+          Uses <code>combineReducers()</code> to combine multiple reducers into
+          one root reducer.
+        </p>
+
+        <button onclick="testCombineReducers()">Test Combined Reducers</button>
+
+        <div id="combine-output" class="output">Output will appear here...</div>
+      </div>
+
+      <!-- =======================================================
+           STEPS 11 - 15
+           ======================================================= -->
+
+      <h2 class="section-divider">Steps 11 - 15</h2>
+
+      <!-- =======================================================
+           STEP 11
+           SEND ACTION DATA TO THE STORE
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="exercise-number">Step 11</div>
+
+        <h2>Send Action Data to the Store</h2>
+
+        <p>
+          Sends additional information with an action using
+          <code>action.text</code>.
+        </p>
+
+        <button onclick="testSendActionData()">Send Note</button>
+
+        <div id="action-data-output" class="output">
+          Output will appear here...
+        </div>
+      </div>
+
+      <!-- =======================================================
+           STEP 12
+           ASYNC ACTIONS / REDUX THUNK
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="exercise-number">Step 12</div>
+
+        <h2>Async Actions with Redux Thunk</h2>
+
+        <p>Simulates requesting data and receiving it after a delay.</p>
+
+        <button onclick="testAsyncAction()">Request Data</button>
+
+        <div id="async-output" class="output">Output will appear here...</div>
+      </div>
+
+      <!-- =======================================================
+           STEP 13
+           WRITE A COUNTER WITH REDUX
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="exercise-number">Step 13</div>
+
+        <h2>Write a Counter with Redux</h2>
+
+        <p>Uses Redux to increment and decrement a counter.</p>
+
+        <button onclick="testCounter()">Run Counter Test</button>
+
+        <div id="counter-output" class="output">Output will appear here...</div>
+      </div>
+
+      <!-- =======================================================
+           STEP 14
+           NEVER MUTATE STATE
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="exercise-number">Step 14</div>
+
+        <h2>Never Mutate State</h2>
+
+        <p>
+          Creates a new array instead of modifying the existing Redux state
+          directly.
+        </p>
+
+        <button onclick="testImmutableState()">Test Immutable State</button>
+
+        <div id="immutable-output" class="output">
+          Output will appear here...
+        </div>
+      </div>
+
+      <!-- =======================================================
+           STEP 15
+           USE THE SPREAD OPERATOR ON ARRAYS
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="exercise-number">Step 15</div>
+
+        <h2>Use the Spread Operator on Arrays</h2>
+
+        <p>
+          Uses <code>...</code> to create a new array from an existing array.
+        </p>
+
+        <button onclick="testSpreadOperator()">Test Spread Operator</button>
+
+        <div id="spread-output" class="output">Output will appear here...</div>
+      </div>
+
+      <!-- =======================================================
+           REDUX LIBRARY
+           ======================================================= -->
+
+      <!--
+        Redux MUST load before redux-practice.js.
+      -->
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.1/redux.min.js"></script>
 
-      <!-- =========================================================
-           Your JavaScript
-           ========================================================= -->
+      <!-- =======================================================
+           REDUX THUNK
+           ======================================================= -->
 
-      <script src="./Redux-Practice.jsx"></script>
+      <!--
+        Step 12 needs Redux Thunk.
+
+        Redux Thunk allows us to dispatch functions that can
+        perform asynchronous work before dispatching normal
+        Redux actions.
+      -->
+
+      <script src="https://unpkg.com/redux-thunk@2.4.2/dist/redux-thunk.min.js"></script>
+
+      <!-- =======================================================
+           OUR REDUX PRACTICE JAVASCRIPT
+           ======================================================= -->
+
+      <script src="./redux-html-practice-code.jsx"></script>
     </div>
   </body>
 </html>
