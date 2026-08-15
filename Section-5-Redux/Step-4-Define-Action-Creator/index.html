@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Redux Practice - Step 4</title>
+
+    <style>
+      /* =========================================================
+         BASIC PAGE STYLING
+         ========================================================= */
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 30px;
+
+        font-family: Arial, sans-serif;
+
+        background-color: #f4f4f4;
+        color: #222;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      .intro {
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+
+      /* =========================================================
+         EXERCISE CARD
+         ========================================================= */
+
+      .exercise {
+        background-color: white;
+
+        padding: 20px;
+        margin-bottom: 20px;
+
+        border-radius: 8px;
+        border: 1px solid #ddd;
+      }
+
+      .exercise h2 {
+        margin-top: 0;
+      }
+
+      .step-number {
+        font-size: 14px;
+        font-weight: bold;
+
+        color: #666;
+
+        text-transform: uppercase;
+
+        margin-bottom: 5px;
+      }
+
+      /* =========================================================
+         BUTTON
+         ========================================================= */
+
+      button {
+        padding: 10px 16px;
+
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        border: none;
+        border-radius: 5px;
+
+        cursor: pointer;
+
+        background-color: #333;
+        color: white;
+
+        font-size: 15px;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+
+      /* =========================================================
+         OUTPUT BOX
+         ========================================================= */
+
+      .output {
+        margin-top: 15px;
+
+        padding: 15px;
+
+        background-color: #eee;
+
+        border-radius: 5px;
+
+        min-height: 45px;
+
+        white-space: pre-wrap;
+
+        font-family: Consolas, monospace;
+
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- =======================================================
+           PAGE TITLE
+           ======================================================= -->
+
+      <h1>Redux Practice - Step 4</h1>
+
+      <p class="intro">
+        This exercise demonstrates how to create an action creator. An action
+        creator is a function that returns a Redux action.
+      </p>
+
+      <!-- =======================================================
+           STEP 4
+           DEFINE AN ACTION CREATOR
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="step-number">Step 4</div>
+
+        <h2>Define an Action Creator</h2>
+
+        <p>An action creator is a function that returns an action object.</p>
+
+        <p>
+          Click the button to run the action creator and see the action that it
+          returns.
+        </p>
+
+        <button onclick="testActionCreator()">Run Action Creator</button>
+
+        <div id="action-creator-output" class="output">
+          Output will appear here...
+        </div>
+      </div>
+    </div>
+
+    <!-- =======================================================
+         STEP 4 JAVASCRIPT
+         ======================================================= -->
+
+    <script src="step-4.jsx"></script>
+  </body>
+</html>

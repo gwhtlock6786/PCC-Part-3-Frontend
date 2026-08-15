@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Redux Practice - Step 6</title>
+
+    <style>
+      /* =========================================================
+         BASIC PAGE STYLING
+         ========================================================= */
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 30px;
+
+        font-family: Arial, sans-serif;
+
+        background-color: #f4f4f4;
+        color: #222;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      .intro {
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+
+      /* =========================================================
+         EXERCISE CARD
+         ========================================================= */
+
+      .exercise {
+        background-color: white;
+
+        padding: 20px;
+        margin-bottom: 20px;
+
+        border-radius: 8px;
+        border: 1px solid #ddd;
+      }
+
+      .exercise h2 {
+        margin-top: 0;
+      }
+
+      .step-number {
+        font-size: 14px;
+        font-weight: bold;
+
+        color: #666;
+
+        text-transform: uppercase;
+
+        margin-bottom: 5px;
+      }
+
+      /* =========================================================
+         BUTTON
+         ========================================================= */
+
+      button {
+        padding: 10px 16px;
+
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        border: none;
+        border-radius: 5px;
+
+        cursor: pointer;
+
+        background-color: #333;
+        color: white;
+
+        font-size: 15px;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+
+      /* =========================================================
+         OUTPUT BOX
+         ========================================================= */
+
+      .output {
+        margin-top: 15px;
+
+        padding: 15px;
+
+        background-color: #eee;
+
+        border-radius: 5px;
+
+        min-height: 45px;
+
+        white-space: pre-wrap;
+
+        font-family: Consolas, monospace;
+
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- =======================================================
+           PAGE TITLE
+           ======================================================= -->
+
+      <h1>Redux Practice - Step 6</h1>
+
+      <p class="intro">
+        This exercise demonstrates how a Redux reducer handles an action and
+        returns new state.
+      </p>
+
+      <!-- =======================================================
+           STEP 6
+           HANDLE AN ACTION IN THE STORE
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="step-number">Step 6</div>
+
+        <h2>Handle an Action in the Store</h2>
+
+        <p>
+          The reducer checks the action type and determines how the Redux state
+          should change.
+        </p>
+
+        <p>
+          Click the button to dispatch a <code>LOGIN</code>
+          action and see the state change.
+        </p>
+
+        <button onclick="testHandleAction()">Test LOGIN</button>
+
+        <div id="handle-action-output" class="output">
+          Output will appear here...
+        </div>
+      </div>
+    </div>
+
+    <!-- =======================================================
+         REDUX LIBRARY
+         ======================================================= -->
+
+    <!--
+      Redux must load BEFORE step-6.jsx.
+    -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.1/redux.min.js"></script>
+
+    <!-- =======================================================
+         STEP 6 JAVASCRIPT
+         ======================================================= -->
+
+    <script src="step-6.jsx"></script>
+  </body>
+</html>
