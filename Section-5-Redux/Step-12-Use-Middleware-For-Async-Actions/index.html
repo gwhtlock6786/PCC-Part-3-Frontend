@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Redux Practice - Step 12</title>
+
+    <style>
+      /* =========================================================
+         BASIC PAGE STYLING
+         ========================================================= */
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 30px;
+
+        font-family: Arial, sans-serif;
+
+        background-color: #f4f4f4;
+        color: #222;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      .intro {
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      /* =========================================================
+         EXERCISE CARD
+         ========================================================= */
+
+      .exercise {
+        background-color: white;
+
+        padding: 25px;
+        margin-bottom: 20px;
+
+        border-radius: 8px;
+        border: 1px solid #ddd;
+      }
+
+      .exercise-number {
+        font-size: 14px;
+        font-weight: bold;
+
+        color: #666;
+
+        text-transform: uppercase;
+
+        margin-bottom: 5px;
+      }
+
+      /* =========================================================
+         BUTTON
+         ========================================================= */
+
+      button {
+        padding: 10px 16px;
+
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        border: none;
+        border-radius: 5px;
+
+        cursor: pointer;
+
+        background-color: #333;
+        color: white;
+
+        font-size: 15px;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+
+      /* =========================================================
+         OUTPUT
+         ========================================================= */
+
+      .output {
+        margin-top: 15px;
+
+        padding: 15px;
+
+        background-color: #eee;
+
+        border-radius: 5px;
+
+        min-height: 150px;
+
+        white-space: pre-wrap;
+
+        font-family: Consolas, monospace;
+
+        line-height: 1.5;
+      }
+
+      /* =========================================================
+         EXPLANATION
+         ========================================================= */
+
+      .explanation {
+        background-color: #fafafa;
+
+        padding: 15px;
+
+        border-left: 4px solid #333;
+
+        margin-top: 20px;
+
+        line-height: 1.6;
+      }
+
+      code {
+        font-family: Consolas, monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- =======================================================
+           PAGE TITLE
+           ======================================================= -->
+
+      <h1>Redux Practice Tester</h1>
+
+      <p class="intro">
+        This page tests Step 12 of the Redux practice exercises.
+      </p>
+
+      <!-- =======================================================
+           STEP 12
+           USE MIDDLEWARE TO HANDLE ASYNCHRONOUS ACTIONS
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="exercise-number">Step 12</div>
+
+        <h2>Use Middleware to Handle Asynchronous Actions</h2>
+
+        <p>
+          Redux normally expects <code>dispatch()</code> to receive an action
+          object. Redux Thunk middleware allows us to dispatch a function that
+          can perform asynchronous work before dispatching a normal Redux
+          action.
+        </p>
+
+        <button onclick="testAsyncAction()">Request Data</button>
+
+        <div id="async-output" class="output">
+          Click "Request Data" to start the asynchronous Redux test.
+        </div>
+
+        <!-- =====================================================
+             CONCEPT EXPLANATION
+             ===================================================== -->
+
+        <div class="explanation">
+          <strong>What this exercise demonstrates:</strong>
+
+          <br /><br />
+
+          Without middleware:
+
+          <br />
+
+          <code> dispatch(action) </code>
+
+          <br /><br />
+
+          With Redux Thunk middleware:
+
+          <br />
+
+          <code> dispatch(function) </code>
+
+          <br /><br />
+
+          The function can perform asynchronous work and then dispatch a normal
+          Redux action when the data is ready.
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         REDUX
+         ========================================================= -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.1/redux.min.js"></script>
+
+    <!-- =========================================================
+         REDUX THUNK
+         ========================================================= -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux-thunk/2.4.2/redux-thunk.min.js"></script>
+
+    <!-- =========================================================
+         STEP 12 JAVASCRIPT
+         ========================================================= -->
+
+    <script src="./step-12.jsx"></script>
+  </body>
+</html>
