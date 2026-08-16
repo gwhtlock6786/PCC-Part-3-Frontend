@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Redux Practice - Step 9</title>
+
+    <style>
+      /* =========================================================
+         BASIC PAGE STYLING
+         ========================================================= */
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 30px;
+
+        font-family: Arial, sans-serif;
+
+        background-color: #f4f4f4;
+        color: #222;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      .intro {
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+
+      /* =========================================================
+         EXERCISE CARD
+         ========================================================= */
+
+      .exercise {
+        background-color: white;
+
+        padding: 20px;
+        margin-bottom: 20px;
+
+        border-radius: 8px;
+        border: 1px solid #ddd;
+      }
+
+      .exercise h2 {
+        margin-top: 0;
+      }
+
+      .step-number {
+        font-size: 14px;
+        font-weight: bold;
+
+        color: #666;
+
+        text-transform: uppercase;
+
+        margin-bottom: 5px;
+      }
+
+      /* =========================================================
+         BUTTON
+         ========================================================= */
+
+      button {
+        padding: 10px 16px;
+
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        border: none;
+        border-radius: 5px;
+
+        cursor: pointer;
+
+        background-color: #333;
+        color: white;
+
+        font-size: 15px;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+
+      /* =========================================================
+         OUTPUT BOX
+         ========================================================= */
+
+      .output {
+        margin-top: 15px;
+
+        padding: 15px;
+
+        background-color: #eee;
+
+        border-radius: 5px;
+
+        min-height: 45px;
+
+        white-space: pre-wrap;
+
+        font-family: Consolas, monospace;
+
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- =======================================================
+           PAGE TITLE
+           ======================================================= -->
+
+      <h1>Redux Practice - Step 9</h1>
+
+      <p class="intro">
+        This exercise demonstrates how to register a listener with the Redux
+        store using <code>store.subscribe()</code>.
+      </p>
+
+      <!-- =======================================================
+           STEP 9
+           REGISTER A STORE LISTENER
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="step-number">Step 9</div>
+
+        <h2>Register a Store Listener</h2>
+
+        <p>
+          <code>store.subscribe()</code> allows us to run a function whenever
+          the Redux store is updated.
+        </p>
+
+        <p>
+          Click the button to dispatch three actions and watch the store
+          listener run after each dispatch.
+        </p>
+
+        <button onclick="testStoreListener()">Test Store Listener</button>
+
+        <div id="listener-output" class="output">
+          Output will appear here...
+        </div>
+      </div>
+    </div>
+
+    <!-- =======================================================
+         REDUX LIBRARY
+         ======================================================= -->
+
+    <!--
+      Redux must load BEFORE step-9.jsx.
+    -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.1/redux.min.js"></script>
+
+    <!-- =======================================================
+         STEP 9 JAVASCRIPT
+         ======================================================= -->
+
+    <script src="step-9.jsx"></script>
+  </body>
+</html>
