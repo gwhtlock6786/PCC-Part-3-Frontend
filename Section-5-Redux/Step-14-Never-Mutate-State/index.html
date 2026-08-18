@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Redux Practice - Step 14</title>
+
+    <style>
+      /* =========================================================
+         BASIC PAGE STYLING
+         ========================================================= */
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 30px;
+
+        font-family: Arial, sans-serif;
+
+        background-color: #f4f4f4;
+        color: #222;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      .intro {
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      /* =========================================================
+         EXERCISE CARD
+         ========================================================= */
+
+      .exercise {
+        background-color: white;
+
+        padding: 25px;
+        margin-bottom: 20px;
+
+        border-radius: 8px;
+        border: 1px solid #ddd;
+      }
+
+      .exercise-number {
+        font-size: 14px;
+        font-weight: bold;
+
+        color: #666;
+
+        text-transform: uppercase;
+
+        margin-bottom: 5px;
+      }
+
+      /* =========================================================
+         BUTTONS
+         ========================================================= */
+
+      button {
+        padding: 10px 16px;
+
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        border: none;
+        border-radius: 5px;
+
+        cursor: pointer;
+
+        background-color: #333;
+        color: white;
+
+        font-size: 15px;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+
+      /* =========================================================
+         OUTPUT BOX
+         ========================================================= */
+
+      .output {
+        margin-top: 15px;
+
+        padding: 15px;
+
+        background-color: #eee;
+
+        border-radius: 5px;
+
+        min-height: 250px;
+
+        white-space: pre-wrap;
+
+        font-family: Consolas, monospace;
+
+        line-height: 1.5;
+      }
+
+      /* =========================================================
+         EXPLANATION
+         ========================================================= */
+
+      .explanation {
+        background-color: #fafafa;
+
+        padding: 15px;
+
+        border-left: 4px solid #333;
+
+        margin-top: 20px;
+
+        line-height: 1.6;
+      }
+
+      code {
+        font-family: Consolas, monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- =======================================================
+           PAGE TITLE
+           ======================================================= -->
+
+      <h1>Redux Practice Tester</h1>
+
+      <p class="intro">
+        This page tests Step 14 of the Redux practice exercises.
+      </p>
+
+      <!-- =======================================================
+           STEP 14
+           NEVER MUTATE STATE
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="exercise-number">Step 14</div>
+
+        <h2>Never Mutate State</h2>
+
+        <p>
+          Redux state should never be changed directly. Instead, the reducer
+          should create and return a new state.
+        </p>
+
+        <button onclick="testImmutableState()">Add Todo</button>
+
+        <button onclick="testReference()">Test Array Reference</button>
+
+        <div id="immutable-output" class="output">
+          Redux state will appear here...
+        </div>
+
+        <!-- =====================================================
+             CONCEPT EXPLANATION
+             ===================================================== -->
+
+        <div class="explanation">
+          <strong> Do NOT mutate the existing state: </strong>
+
+          <br /><br />
+
+          <code> state.push(action.todo) </code>
+
+          <br /><br />
+
+          Instead, create a new array:
+
+          <br /><br />
+
+          <code> return [...state, action.todo] </code>
+
+          <br /><br />
+
+          The original array stays unchanged, and Redux receives a completely
+          new array as the new state.
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         REDUX
+         ========================================================= -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.1/redux.min.js"></script>
+
+    <!-- =========================================================
+         STEP 14 JAVASCRIPT
+         ========================================================= -->
+
+    <script src="step-14.jsx"></script>
+  </body>
+</html>
