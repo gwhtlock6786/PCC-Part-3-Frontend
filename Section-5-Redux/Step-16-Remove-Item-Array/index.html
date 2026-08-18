@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Redux Practice - Step 16</title>
+
+    <style>
+      /* =========================================================
+         BASIC PAGE STYLING
+         ========================================================= */
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 30px;
+
+        font-family: Arial, sans-serif;
+
+        background-color: #f4f4f4;
+        color: #222;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      .intro {
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      /* =========================================================
+         EXERCISE CARD
+         ========================================================= */
+
+      .exercise {
+        background-color: white;
+
+        padding: 25px;
+        margin-bottom: 20px;
+
+        border-radius: 8px;
+        border: 1px solid #ddd;
+      }
+
+      .exercise-number {
+        font-size: 14px;
+        font-weight: bold;
+
+        color: #666;
+
+        text-transform: uppercase;
+
+        margin-bottom: 5px;
+      }
+
+      /* =========================================================
+         BUTTONS
+         ========================================================= */
+
+      button {
+        padding: 10px 16px;
+
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        border: none;
+        border-radius: 5px;
+
+        cursor: pointer;
+
+        background-color: #333;
+        color: white;
+
+        font-size: 15px;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+
+      /* =========================================================
+         OUTPUT BOX
+         ========================================================= */
+
+      .output {
+        margin-top: 15px;
+
+        padding: 15px;
+
+        background-color: #eee;
+
+        border-radius: 5px;
+
+        min-height: 350px;
+
+        white-space: pre-wrap;
+
+        font-family: Consolas, monospace;
+
+        line-height: 1.5;
+      }
+
+      /* =========================================================
+         EXPLANATION
+         ========================================================= */
+
+      .explanation {
+        background-color: #fafafa;
+
+        padding: 15px;
+
+        border-left: 4px solid #333;
+
+        margin-top: 20px;
+
+        line-height: 1.6;
+      }
+
+      code {
+        font-family: Consolas, monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- =======================================================
+           PAGE TITLE
+           ======================================================= -->
+
+      <h1>Redux Practice Tester</h1>
+
+      <p class="intro">
+        This page tests Step 16 of the Redux practice exercises.
+      </p>
+
+      <!-- =======================================================
+           STEP 16
+           REMOVE AN ITEM FROM AN ARRAY
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="exercise-number">Step 16</div>
+
+        <h2>Remove an Item from an Array</h2>
+
+        <p>
+          Removes an item from an array without changing the original array.
+        </p>
+
+        <button onclick="testFilter()">Test filter()</button>
+
+        <button onclick="testReduxRemove()">Remove Item with Redux</button>
+
+        <div id="remove-output" class="output">Results will appear here...</div>
+
+        <!-- =====================================================
+             CONCEPT EXPLANATION
+             ===================================================== -->
+
+        <div class="explanation">
+          <strong> Instead of changing the original array: </strong>
+
+          <br /><br />
+
+          <code> state.splice(...) </code>
+
+          <br /><br />
+
+          We can use:
+
+          <br /><br />
+
+          <code> state.filter(...) </code>
+
+          <br /><br />
+
+          <code> filter() </code>
+
+          creates a new array containing only the items that pass the condition.
+
+          <br /><br />
+
+          This makes it useful for maintaining immutable Redux state.
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         REDUX
+         ========================================================= -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.1/redux.min.js"></script>
+
+    <!-- =========================================================
+         STEP 16 JAVASCRIPT
+         ========================================================= -->
+
+    <script src="step-16.jsx"></script>
+  </body>
+</html>

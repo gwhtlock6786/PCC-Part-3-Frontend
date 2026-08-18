@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Redux Practice - Step 15</title>
+
+    <style>
+      /* =========================================================
+         BASIC PAGE STYLING
+         ========================================================= */
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 30px;
+
+        font-family: Arial, sans-serif;
+
+        background-color: #f4f4f4;
+        color: #222;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      .intro {
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      /* =========================================================
+         EXERCISE CARD
+         ========================================================= */
+
+      .exercise {
+        background-color: white;
+
+        padding: 25px;
+        margin-bottom: 20px;
+
+        border-radius: 8px;
+        border: 1px solid #ddd;
+      }
+
+      .exercise-number {
+        font-size: 14px;
+        font-weight: bold;
+
+        color: #666;
+
+        text-transform: uppercase;
+
+        margin-bottom: 5px;
+      }
+
+      /* =========================================================
+         BUTTONS
+         ========================================================= */
+
+      button {
+        padding: 10px 16px;
+
+        margin-top: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+
+        border: none;
+        border-radius: 5px;
+
+        cursor: pointer;
+
+        background-color: #333;
+        color: white;
+
+        font-size: 15px;
+      }
+
+      button:hover {
+        background-color: #555;
+      }
+
+      /* =========================================================
+         OUTPUT BOX
+         ========================================================= */
+
+      .output {
+        margin-top: 15px;
+
+        padding: 15px;
+
+        background-color: #eee;
+
+        border-radius: 5px;
+
+        min-height: 300px;
+
+        white-space: pre-wrap;
+
+        font-family: Consolas, monospace;
+
+        line-height: 1.5;
+      }
+
+      /* =========================================================
+         EXPLANATION
+         ========================================================= */
+
+      .explanation {
+        background-color: #fafafa;
+
+        padding: 15px;
+
+        border-left: 4px solid #333;
+
+        margin-top: 20px;
+
+        line-height: 1.6;
+      }
+
+      code {
+        font-family: Consolas, monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- =======================================================
+           PAGE TITLE
+           ======================================================= -->
+
+      <h1>Redux Practice Tester</h1>
+
+      <p class="intro">
+        This page tests Step 15 of the Redux practice exercises.
+      </p>
+
+      <!-- =======================================================
+           STEP 15
+           USE THE SPREAD OPERATOR ON ARRAYS
+           ======================================================= -->
+
+      <div class="exercise">
+        <div class="exercise-number">Step 15</div>
+
+        <h2>Use the Spread Operator on Arrays</h2>
+
+        <p>
+          The spread operator allows us to create a new array containing the
+          values from an existing array.
+        </p>
+
+        <button onclick="testSpreadOperator()">Test Spread Operator</button>
+
+        <button onclick="testAddItem()">Add Item with Spread</button>
+
+        <div id="spread-output" class="output">Results will appear here...</div>
+
+        <!-- =====================================================
+             CONCEPT EXPLANATION
+             ===================================================== -->
+
+        <div class="explanation">
+          <strong> Basic Spread Syntax: </strong>
+
+          <br /><br />
+
+          <code> const newArray = [...oldArray]; </code>
+
+          <br /><br />
+
+          To add something to the new array:
+
+          <br /><br />
+
+          <code> const newArray = [...oldArray, newItem]; </code>
+
+          <br /><br />
+
+          This creates a NEW array instead of modifying the original array.
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         REDUX
+         ========================================================= -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.1/redux.min.js"></script>
+
+    <!-- =========================================================
+         STEP 15 JAVASCRIPT
+         ========================================================= -->
+
+    <script src="step-15.jsx"></script>
+  </body>
+</html>
