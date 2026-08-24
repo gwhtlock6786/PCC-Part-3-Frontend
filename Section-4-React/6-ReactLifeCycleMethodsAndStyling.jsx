@@ -267,7 +267,9 @@ class MagicEightBall extends React.Component {
       "Outlook not so good",
       "Very doubtful",
     ];
-    const answer = possibleAnswers[this.state.randomIndex]; // Change this line
+
+    const answer = possibleAnswers[this.state.randomIndex];
+    // Change this line
     return (
       <div>
         <h1>Use Advanced JavaScript in React Render Method</h1>
