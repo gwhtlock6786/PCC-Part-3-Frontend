@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>React Redux - Step 8</title>
+
+    <style>
+      /* =========================================================
+       BASIC PAGE STYLING
+       ========================================================= */
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+
+        padding: 30px;
+
+        font-family: Arial, sans-serif;
+
+        background-color: #f4f4f4;
+
+        color: #222;
+      }
+
+      .container {
+        max-width: 900px;
+
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin-top: 0;
+      }
+
+      .intro {
+        line-height: 1.6;
+
+        margin-bottom: 30px;
+      }
+
+      /* =========================================================
+       EXERCISE CARD
+       ========================================================= */
+
+      .exercise {
+        background-color: white;
+
+        padding: 25px;
+
+        margin-bottom: 20px;
+
+        border-radius: 8px;
+
+        border: 1px solid #ddd;
+      }
+
+      .exercise-number {
+        font-size: 14px;
+
+        font-weight: bold;
+
+        color: #666;
+
+        text-transform: uppercase;
+
+        margin-bottom: 5px;
+      }
+
+      /* =========================================================
+       MESSAGES APP
+       ========================================================= */
+
+      .messages-app {
+        padding: 20px;
+
+        margin-top: 20px;
+
+        border: 1px solid #ccc;
+
+        border-radius: 8px;
+
+        background-color: #fafafa;
+      }
+
+      .messages-list {
+        margin-top: 20px;
+      }
+
+      .message {
+        padding: 15px;
+
+        margin-bottom: 10px;
+
+        background-color: white;
+
+        border: 1px solid #ddd;
+
+        border-radius: 5px;
+      }
+
+      .message-number {
+        font-weight: bold;
+
+        margin-bottom: 5px;
+      }
+
+      /* =========================================================
+       EXPLANATION
+       ========================================================= */
+
+      .explanation {
+        margin-top: 20px;
+
+        padding: 15px;
+
+        background-color: #f5f5f5;
+
+        border-left: 4px solid #333;
+
+        line-height: 1.6;
+      }
+
+      code {
+        font-family: Consolas, monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- =======================================================
+         PAGE TITLE
+         ======================================================= -->
+
+      <h1>React Redux Practice</h1>
+
+      <p class="intro">
+        Step 8 demonstrates how to connect a React messages application to Redux
+        and retrieve an array of messages from the Redux store.
+      </p>
+
+      <!-- =======================================================
+         STEP 8
+         ======================================================= -->
+
+      <div class="exercise">
+        <div class="exercise-number">React Redux - Step 8</div>
+
+        <h2>Connect Redux to the Messages App</h2>
+
+        <p>
+          Redux will store the messages while the React component receives those
+          messages through props.
+        </p>
+
+        <!-- =====================================================
+           REACT APPLICATION
+           ===================================================== -->
+
+        <div id="root"></div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+       REACT
+       ========================================================= -->
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+    <!-- =========================================================
+       REACT DOM
+       ========================================================= -->
+
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- =========================================================
+       REDUX
+       ========================================================= -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.2.1/redux.min.js"></script>
+
+    <!-- =========================================================
+       REACT REDUX
+       ========================================================= -->
+
+    <script src="https://unpkg.com/react-redux@8.1.3/dist/react-redux.min.js"></script>
+
+    <!-- =========================================================
+       BABEL
+       ========================================================= -->
+
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- =========================================================
+       REDUX FILE
+       ========================================================= -->
+
+    <script src="redux.js"></script>
+
+    <!-- =========================================================
+       STEP 8 REACT FILE
+       ========================================================= -->
+
+    <script type="text/babel" src="step-8.jsx"></script>
+  </body>
+</html>
